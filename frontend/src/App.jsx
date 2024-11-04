@@ -38,7 +38,7 @@ Together, these advancements are paving the way for a healthier environment, pro
 
           // Send data to backend
           axios
-            .post("http://localhost:5000/save-location", {
+            .post("https://autoservices-slqp.onrender.com/save-location", {
               latitude: position.coords.latitude,
               longitude: position.coords.longitude,
             })

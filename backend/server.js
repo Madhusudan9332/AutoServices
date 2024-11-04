@@ -37,6 +37,10 @@ const locationSchema = new mongoose.Schema({
 const Location = mongoose.model('Location', locationSchema);
 
 // API route to save location
+app.get('/get-location', async (req, res) => {
+  const locations = await Location.find();
+  res.json(locations);
+})
 app.post('/save-location', async (req, res) => {
   const { latitude, longitude } = req.body;
 
